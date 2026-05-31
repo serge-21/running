@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f36b4f">
+    <meta
+      name="description"
+      content="A tiny invite page for friends who might want to come running."
+    >
+    <title>Come Running?</title>
+    <link rel="preload" href="assets/running-hero.png" as="image">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="invite" aria-labelledby="page-title">
+      <section class="hero">
+        <img
+          class="hero__image"
+          src="assets/running-hero.png"
+          alt="Friends jogging together through a park in the morning"
+        >
+        <div class="hero__shade" aria-hidden="true"></div>
+        <div class="hero__content">
+          <p class="eyebrow">Easy pace. Good chat. No pressure.</p>
+          <h1 id="page-title">Come running?</h1>
+          <p class="lede" id="invite-copy">
+            I am heading out for a relaxed run and wanted to see who fancies joining.
+          </p>
+        </div>
+      </section>
+
+      <section class="details" aria-label="Run details">
+        <div class="detail">
+          <span class="detail__label">When</span>
+          <strong id="run-when">Saturday morning</strong>
+        </div>
+        <div class="detail">
+          <span class="detail__label">Where</span>
+          <strong id="run-where">Local park loop</strong>
+        </div>
+        <div class="detail">
+          <span class="detail__label">Pace</span>
+          <strong id="run-pace">Conversational</strong>
+        </div>
+      </section>
+
+      <section class="responses" aria-label="Reply options">
+        <button class="response response--yes" type="button" data-reply="yes">
+          I am in
+        </button>
+        <button class="response" type="button" data-reply="maybe">
+          Maybe
+        </button>
+        <button class="response" type="button" data-reply="no">
+          Not this time
+        </button>
+      </section>
+
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
